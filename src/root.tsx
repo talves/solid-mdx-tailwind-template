@@ -12,6 +12,7 @@ import {
   Scripts,
   Title,
 } from "solid-start";
+import NavigationBar from "~/components/navigation-bar";
 import "./root.css";
 
 export default function Root() {
@@ -25,13 +26,7 @@ export default function Root() {
       <Body>
         <Suspense>
           <ErrorBoundary>
-            <A class="mr-2" href="/">
-              Index
-            </A>
-            <A class="mr-2" href="/about">
-              About
-            </A>
-            <A href="/about-mdx">MDX</A>
+            <NavigationBar />
             <Routes>
               <FileRoutes />
             </Routes>
