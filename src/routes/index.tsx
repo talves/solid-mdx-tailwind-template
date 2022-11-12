@@ -3,8 +3,8 @@ import Counter from "~/components/Counter";
 
 export default function Home() {
   return (
-    <main class="text-center mx-auto text-gray-700 p-4">
-      <h1 class="max-6-xs text-6xl text-sky-700 font-thin uppercase my-16">
+    <main class="text-center mx-auto text-slate-700 p-4 dark:bg-slate-700 dark:text-slate-300">
+      <h1 class="max-6-xs text-6xl font-thin uppercase my-16 dark:text-slate-200">
         Hello world!
       </h1>
       <Counter />
@@ -13,7 +13,7 @@ export default function Home() {
         <a
           href="https://solidjs.com"
           target="_blank"
-          class="text-sky-600 hover:underline"
+          class="text-emerald-800 dark:text-blue-400 hover:underline"
         >
           solidjs.com
         </a>{" "}
@@ -22,7 +22,7 @@ export default function Home() {
       <p class="my-4">
         <span>Home</span>
         {" - "}
-        <A href="/about" class="text-sky-600 hover:underline">
+        <A href="/about" class="text-amber-600 hover:underline">
           About Page
         </A>{" "}
       </p>

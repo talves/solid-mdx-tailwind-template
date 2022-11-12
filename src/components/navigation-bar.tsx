@@ -1,7 +1,17 @@
 import { createEffect, createSignal } from "solid-js";
 import { A } from "solid-start";
 import MenuButton from "~/components/menu-button";
-import ThemeSwitcher from "~/components/theme-switcher";
+import Navigation from "~/components/Navigation";
+
+const data = {
+  menu: {
+    items: [
+      { id:1, path: "/", label: "Home" },
+      { id:2, path: "/about", label: "About" },
+      { id:3, path: "/mdx", label: "MDX" },
+    ],
+  },
+};
 
 export default function NavigationBar() {
   const [menuOpen, setOpen] = createSignal("false");
@@ -19,10 +29,10 @@ export default function NavigationBar() {
           </span>
         </A>
         <MenuButton onToggle={setOpen} />
-        {/* <Navigation /> */}
-        <div class="float-right absolute right-0">
+        <Navigation items={data?.menu.items} />
+        {/* <div class="float-right absolute right-0">
           <ThemeSwitcher />
-        </div>
+        </div> */}
       </div>
     </header>
   );
