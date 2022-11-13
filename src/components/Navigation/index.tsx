@@ -11,14 +11,18 @@ type MenuItem = {
   active: boolean;
 };
 
+function CurrentRoute() {
+  if (typeof window ==="object" ) { return location?.pathname } else { return "/"}
+}
+
 export default function Navigation(props) {
-  const isSelected = createSelector((): string => location?.pathname);
+  const isSelected = createSelector((): string => CurrentRoute());
   const [items, setItems] = createSignal<MenuItem[]>(props.items.map((item: MenuItem) => {
     console.log("isSelected:",item.path, isSelected(item.path))
     item.active = isSelected(item.path);
     return item;
   }));
-console.log("items()", items())
+
   function handleItemClick(path:string) {
     console.log("clicked on route:", path)
     const prevItems: MenuItem[] = items().map((item) => {

@@ -1,5 +1,6 @@
 import solid from "solid-start/vite";
 import { defineConfig } from "vite";
+import staticAdapter from "solid-start-static";
 
 export default defineConfig({
   plugins: [
@@ -11,6 +12,11 @@ export default defineConfig({
       }),
       enforce: "pre",
     },
-    solid({ ssr: false, extensions: [".mdx", ".md", ".tsx"] }),
+    solid({
+      // ssr: false,
+      extensions: [".mdx", ".md", ".tsx"],
+      prerenderRoutes: ["/index", "404"],
+      adapter: staticAdapter(),
+    }),
   ],
 });
