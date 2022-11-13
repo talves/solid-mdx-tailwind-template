@@ -29,7 +29,7 @@ export default function NavigationBar() {
           </span>
         </A>
         <MenuButton onToggle={setOpen} />
-        <Navigation items={data?.menu.items} />
+        <Navigation items={data?.menu.items} toggle={menuOpen()} />
         {/* <div class="float-right absolute right-0">
           <ThemeSwitcher />
         </div> */}
