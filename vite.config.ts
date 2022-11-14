@@ -1,6 +1,6 @@
-import solid from "solid-start/vite";
 import { defineConfig } from "vite";
-import staticAdapter from "solid-start-static";
+import solid from "solid-start/vite";
+import netlify from "solid-start-netlify";
 
 export default defineConfig({
   plugins: [
@@ -16,7 +16,7 @@ export default defineConfig({
       // ssr: false,
       extensions: [".mdx", ".md", ".tsx"],
       prerenderRoutes: ["/index", "404"],
-      adapter: staticAdapter(),
+      adapter: netlify({ edge: false })
     }),
   ],
 });

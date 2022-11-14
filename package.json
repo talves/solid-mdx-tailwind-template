@@ -10,8 +10,8 @@
     "@mdx-js/rollup": "^2.1.5",
     "autoprefixer": "^10.4.12",
     "postcss": "^8.4.18",
+    "solid-start-netlify": "^0.2.5",
     "solid-start-node": "^0.2.0",
-    "solid-start-static": "^0.2.5",
     "tailwindcss": "^3.2.0",
     "typescript": "^4.8.4",
     "vite": "^3.1.8"
