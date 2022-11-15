@@ -5,15 +5,15 @@
 [[plugins]]
     package="@talves/netlify-email-plugin"
 
-[[redirects]]
-  from = "/.functions/email/*"
-  to = "/.functions/email/:splat"
-  status = 200
-  force = true # COMMENT: ensure that we always redirect
+# [[redirects]]
+#   from = "/.functions/email/*"
+#   to = "/.functions/email/:splat"
+#   status = 200
+#   force = true # COMMENT: ensure that we always redirect
 
-# /*    /.netlify/functions/index    200
-[[redirects]]
-  from = "/*"
-  to = "/.netlify/functions/index"
-  status = 200
-  force = false # COMMENT: doesn't force redirect
+# # /*    /.netlify/functions/index    200
+# [[redirects]]
+#   from = "/*"
+#   to = "/.netlify/functions/index"
+#   status = 200
+#   force = false # COMMENT: doesn't force redirect

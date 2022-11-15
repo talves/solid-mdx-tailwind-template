@@ -13,9 +13,7 @@ export default defineConfig({
       enforce: "pre",
     },
     solid({
-      // ssr: false,
       extensions: [".mdx", ".md", ".tsx"],
-      prerenderRoutes: ["/index", "404"],
       adapter: netlify({ edge: false })
     }),
   ],
